@@ -22,7 +22,7 @@ public class Store {
     @Column(nullable =  false)
     private String brand;
 
-    @OneToOne
+    @OneToOne(fetch = FetchType.LAZY)
     private User storeAdmin;
 
     private LocalDateTime createdAt;

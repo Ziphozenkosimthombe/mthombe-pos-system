@@ -26,16 +26,18 @@ public class User {
     @Email(message  = "Email should be valid")
     private String email;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     private Store store;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     private Branch branch;
+
     private String phone;
 
 
     @Column(nullable = false)
     private UserRole role;
+
 
     @Column(nullable = false)
     private String password;
